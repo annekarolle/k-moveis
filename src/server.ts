@@ -8,7 +8,9 @@ import AppDataSource from "./data-source";
         console.error("Error during Data Source initialization", err)
     })
     
-    app.listen(3000, () => {
-        console.log("Servidor executando")
+
+    const port = 3000
+    app.listen(port, () => {
+        console.log(`Servidor executando ${port}`)
     })    
 })()

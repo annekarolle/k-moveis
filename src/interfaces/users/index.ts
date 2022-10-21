@@ -1,3 +1,5 @@
+import { JwtPayload } from "jsonwebtoken"
+
 export interface IUserRequest {
     name: string
     email: string
@@ -12,6 +14,7 @@ export interface IUser {
     isAdm: boolean
     createdAt: Date
     updatedAt: Date
+    isActive: boolean
 }
 
 
@@ -24,4 +27,12 @@ export interface IUserUpdate {
     name?: string
     email?: string
     password?: string
+    id?: string
+    isAdm?: boolean 
+    isActive?: boolean
+}
+
+export interface IDecoded extends JwtPayload{
+    id: string,
+    isAdmin: boolean
 }

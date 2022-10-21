@@ -1,3 +1,5 @@
+import { Categories } from "../../entities/categories.entity"
+
 export interface IAddressRequest {
     district: string
     zipCode: string
@@ -10,5 +12,13 @@ export interface IPropertyRequest {
     value: number
     size: number
     address: IAddressRequest
-    categoryId: string
+    categoryId?: string
+}
+
+export interface IPropertyResponse{
+    value: number
+    size: number
+    address: IAddressRequest
+    category: Categories
+    
 }
